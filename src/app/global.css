@@ -1,0 +1,19 @@
+html {
+  box-sizing: border-box;
+  /* font-family: Arial, sans-serif; */
+  font-family: Roboto,  Arial, sans-serif;
+}
+
+body {
+  background-color: #333;
+  color: #EEE;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+

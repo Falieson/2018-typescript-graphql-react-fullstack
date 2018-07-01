@@ -1,0 +1,16 @@
+.list--horizontal {
+  ul {
+    padding: 1rem 0 0 0;
+    list-style-type: none;
+    background-color: #c6c6c6;
+  }
+  li { 
+    padding: 1rem;
+    display: inline;
+    margin: 0 .5rem;
+  }  
+}
+
+.header--text {
+  color: #111;
+}
