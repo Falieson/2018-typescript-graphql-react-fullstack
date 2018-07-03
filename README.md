@@ -29,7 +29,7 @@ This module is part of a collection of uniformly built starter-kits designed for
 
 - [Install Node and Setup Dev Envionment](/docs/INSTALL_Environment.md) - Most can skip this
 - [Install MongoDB](/docs/INSTALL_MongoDB.md) - Dev Endpoint is config'd to use a local MongoDB
-- Review `./webpack/paths.js`,  `./scripts/*`, `./tslint.json`
+- Review `./webpack/paths.js`,  `./scripts/*`, `./tslint.json`, `./docs/`
 
 ## Commands - READ THIS
 
@@ -59,9 +59,9 @@ This module is part of a collection of uniformly built starter-kits designed for
 
 ### MongoDB
 
-- [ ] :gem:  `mongodb` config'd for development
+- [ ] :gem:  `mongodb` development helpers (`./scripts/mongodb.js`)
 - [ ] :gem:  `mongoose` ORM for better MongoDB development
-- [ ] :gem:  `passport-local-mongoose` for PW based Authorization
+- [ ] :gem:  `passport-local-mongoose` for Auth w/ Password
 
 ### GraphQL
 
