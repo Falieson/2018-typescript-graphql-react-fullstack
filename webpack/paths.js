@@ -16,8 +16,8 @@ const build = {
 const src = {
   _: srcPath,
   app: {
-    _: path.join(srcPath),
-    entry: path.join(srcPath, 'index.tsx'),
+    _: path.join(srcPath, 'app'),
+    entry: path.join(srcPath, 'app', 'index.tsx'),
   },
   client : {
     _: path.join(srcPath, 'client'),

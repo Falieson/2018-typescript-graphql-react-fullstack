@@ -53,6 +53,7 @@
     "html-webpack-plugin": "3.2.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "23.1.0",
+    "jest-fetch-mock": "1.6.5",
     "node-sass": "4.9.0",
     "nps": "5.9.0",
     "nps-utils": "1.5.0",

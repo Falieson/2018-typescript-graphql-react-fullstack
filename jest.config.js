@@ -15,13 +15,13 @@ module.exports = {
   ],
   "globals": {
     "ts-jest": {
-      "enableTsDiagnostics": true,
+      "enableTsDiagnostics": false,
       "skipBabel": true,
       "tsConfigFile": "tsconfig.jest.json"
     }
   },
   "moduleNameMapper": {
-    "\\.(css|less)$": "identity-obj-proxy", // mock css
+    "\\.(s?css|less)$": "identity-obj-proxy", // mock css
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
       "<rootDir>/jest/mocks/fileMock.js",   // mock files
   },

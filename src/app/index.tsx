@@ -1,15 +1,10 @@
-// import './fonts'
-
+// Client Entry Point
 import * as React from 'react'
-// import Helmet from './Helmet'
+import * as ReactDOM from 'react-dom'
 
-import Page from '../components/page/'
-import Routes from '../routes/'
-import './global.css'
+import App from './application/'
 
-export default function App() {
-  return <Page>
-    {/* <Helmet /> */}
-    <Routes />
-  </Page>
-}
+ReactDOM.render(
+  <App />,
+  document.getElementById('root'),
+)

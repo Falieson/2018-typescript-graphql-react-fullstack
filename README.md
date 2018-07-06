@@ -59,7 +59,7 @@ This module is part of a collection of uniformly built starter-kits designed for
 
 ### MongoDB
 
-- [ ] :bank:  `mongodb` development helpers (`./scripts/mongodb.js`)
+- [x] :bank:  `mongodb` development helpers (`./scripts/mongodb.js`)
 - [ ] :bullettrain_front:  `mongoose` ORM for better MongoDB development
 - [ ] :passport_control:  `passport-local-mongoose` for Auth w/ Password
 
