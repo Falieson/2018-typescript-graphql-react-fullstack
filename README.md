@@ -53,20 +53,20 @@ This module is part of a collection of uniformly built starter-kits designed for
 
 ### Express
 
-- [ ] :gem:  `express-server`
-- [ ] :gem:  `express-sessions`
-- [ ] :gem:  `passport` for Authorization
+- [ ] :globe_with_meridians:  `express-server`
+- [ ] :new_moon_with_face:  `express-sessions`
+- [ ] :passport_control:  `passport` for Authorization
 
 ### MongoDB
 
-- [ ] :gem:  `mongodb` development helpers (`./scripts/mongodb.js`)
-- [ ] :gem:  `mongoose` ORM for better MongoDB development
-- [ ] :gem:  `passport-local-mongoose` for Auth w/ Password
+- [ ] :bank:  `mongodb` development helpers (`./scripts/mongodb.js`)
+- [ ] :bullettrain_front:  `mongoose` ORM for better MongoDB development
+- [ ] :passport_control:  `passport-local-mongoose` for Auth w/ Password
 
 ### GraphQL
 
-- [x] :gem:  `apollo-client` w/ `link-state` instead of `react-redux`
-- [ ] :gem:  `apollo-server` w/ `subscriptions` over websocket
+- [x] :radio:  `apollo-client` w/ `link-state` instead of `react-redux`
+- [ ] :satellite:  `apollo-server` w/ `subscriptions` over websocket
 
 ### React
 

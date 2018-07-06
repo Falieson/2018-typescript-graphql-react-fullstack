@@ -1,4 +1,6 @@
-- [ ] :gem:  `mongodb` development helpers (`./scripts/mongodb.js`)
+# TODOs
+
+- [x] :gem:  `mongodb` development helpers (`./scripts/mongodb.js`)
 - [ ] :gem:  `mongoose` ORM for better MongoDB development
 - [ ] :gem:  `express-server`
 - [ ] :gem:  `apollo-server` w/ `subscriptions` over websocket

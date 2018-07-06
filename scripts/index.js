@@ -3,6 +3,8 @@ const { series, rimraf, } = require('nps-utils') // concurrent, setColors
 const build = require('./build.js')
 const commit = require('./commit.js')
 const lint = require('./lint.js')
+const mongo = require('./mongo.js')
+const postinstall = require('./postinstall.js')
 const release = require('./release.js')
 const start = require('./start.js')
 const scrub = require('./scrub.js')
@@ -55,16 +57,18 @@ const shortcuts = {
 }
 
 const scripts =  {
-    build,
-    commit,
-    default: start.default,
-    git,
-    lint,
-    publish,
-    release,
-    scrub,
-    start,
-    test,
+  build,
+  commit,
+  default: start.default,
+  git,
+  lint,
+  mongo,
+  publish,
+  postinstall,
+  release,
+  scrub,
+  start,
+  test,
 }
 
 module.exports = Object.assign({}, shortcuts, scripts,) // appends scripts to shortcuts so they are grepp'd first
