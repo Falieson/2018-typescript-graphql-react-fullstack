@@ -1,9 +1,5 @@
 const path = require('path');
 
-// const root = process.env.NODE_ENV === 'production'
-//   ? process.cwd()
-//   : path.resolve(process.cwd(), 'build', 'client')
-// const cwd = path.resolve(process.cwd())
 const rootPath = path.resolve(__dirname, '..')
 const buildPath = path.resolve(rootPath, 'build')
 const srcPath = path.resolve(rootPath, 'src')

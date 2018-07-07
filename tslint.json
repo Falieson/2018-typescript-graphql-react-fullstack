@@ -80,7 +80,7 @@
       ],
       "no-trailing-whitespace": true,
       "no-unused-expression": [true, "allow-fast-null-checks"],
-      "no-unused-variable": [true, {"ignore-pattern": "/(^_)|(^err)/"}],
+      "no-unused-variable": [true, {"ignore-pattern": "/(^_)|(^err)|/"}],
       "no-use-before-declare": true,
       "no-var-requires": true,
       "one-line": [

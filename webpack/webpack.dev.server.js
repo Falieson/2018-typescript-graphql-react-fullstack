@@ -1,12 +1,11 @@
 const webpack = require('webpack')
 const merge = require('webpack-merge');
+
+const {HOST_PATH, APP_PORT} = require('./config')
+const paths = require('./paths')
 const devClient = require('./webpack.dev.client')
 
-const paths = require('./paths')
 const clientBuildPath = paths.build.client
-const HOST = 'http://0.0.0.0'
-const PORT = 3000
-const HOST_PATH = HOST+':'+PORT+'/'
 
 const DevServerConfig = merge(devClient, {
   devServer: {
@@ -23,7 +22,7 @@ const DevServerConfig = merge(devClient, {
       warnings: true,
       errors: true
     },
-    port: PORT,
+    port: APP_PORT,
     publicPath: HOST_PATH,
     stats: {
       chunkModules: false,

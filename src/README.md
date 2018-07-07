@@ -1,9 +1,12 @@
 # SRC structure
 
+The application source is **typescript**, the rest of the framework is **javascript**.
+
 ```text
 .
+├── config.ts                     # shared config (client/server)
 ├── app/
-│   ├── config.ts
+│   ├── config.ts                 # client config
 │   ├── index.ts
 │   ├── application/              # global definitions
 │   ├── assets/                   # static files
@@ -15,13 +18,13 @@
 │   └── routes/
 ├── client/index.template.html
 ├── server/
-│   ├── config.ts
-│   ├── express.ts
-│   ├── index.ts
+│   ├── config.ts                 # server config
+│   ├── express.ts                # web server details
+│   ├── index.ts                  # server connections register
+│   ├── mongodb.ts                # DB & ORM details
 │   ├── assets/                   # static files
-│   ├── data/                     # connection to mongo
+│   ├── data/
 │       ├── models/
-│       ├── mongodb.ts
 │       ├── resolvers.ts
 │       └── schema.ts
 │   └── middleware/

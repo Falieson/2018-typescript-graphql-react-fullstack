@@ -2,7 +2,7 @@ const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const paths = require('./paths')
+const paths = require('../paths')
 const commonClient = require('./webpack.common.client');
 
 const clientTemplateSrc = paths.src.client.template

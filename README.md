@@ -59,7 +59,7 @@ This module is part of a collection of uniformly built starter-kits designed for
 
 ### MongoDB
 
-- [x] :bank:  `mongodb` development helpers (`./scripts/mongodb.js`)
+- [x] :bank:  `mongodb` dev helpers (`./scripts/mongo.js`)
 - [ ] :bullettrain_front:  `mongoose` ORM for better MongoDB development
 - [ ] :passport_control:  `passport-local-mongoose` for Auth w/ Password
 
@@ -136,5 +136,5 @@ Now go make some changes to `src/index.ts` to see the tooling in action.
 
 ## Docs
 
-- [HowTo make a TS Module w/ Declarations](http://www.tgrstack.com/#ts-module_articles)
+- [Tutorials and Examples](http://www.tgrstack.com/)
 - [Changelog](/CHANGELOG.md)
