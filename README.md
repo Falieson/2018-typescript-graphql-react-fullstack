@@ -21,14 +21,14 @@
 
 ## About
 
-This starter kit is a launching point for **[Typescript Graphql React Fullstack prototyping](/Falieson/tgrstack.com/wiki/ts-gql-react-fullstack-home-page)**. Running the build script compiles `src/` into `build/` with `build/server/` being an express-server ready for `pm2`.
+This starter kit is a launching point for **[Typescript Graphql React Fullstack prototyping](https://github.com/Falieson/tgrstack.com/wiki/ts-gql-react-fullstack-home-page)**. Running the build script compiles `src/` into `build/` with `build/server/` being an express-server ready for `pm2`.
 
 This module is part of a collection of uniformly built starter-kits designed for large-scale application development with TypeScript, GraphQL, and React. Find these, articles, and examples at [www.TGRStack.com](http://www.TGRStack.com). Skip to the bottom for links to a series of tutorials that walkthrough the creation of this module.
 
 ## Requirements
 
-- [Install Node and Setup Dev Envionment](/Falieson/tgrstack.com/wiki/Install-Environment) - Most can skip this
-- [Install MongoDB](/Falieson/tgrstack.com/wiki/Install-MongoDB) - Dev Endpoint is config'd to use a local MongoDB
+- [Install Node and Setup Dev Envionment](https://github.com/Falieson/tgrstack.com/wiki/Install-Environment) - Most can skip this
+- [Install MongoDB](https://github.com/Falieson/tgrstack.com/wiki/Install-MongoDB) - Dev Endpoint is config'd to use a local MongoDB
 - Review `./webpack/paths.js`,  `./scripts/*`, `./tslint.json`, `./docs/`
 
 ## Commands - READ THIS
@@ -139,6 +139,6 @@ Now go make some changes to `src/index.ts` to see the tooling in action.
 
 ## Docs
 
-- [Wiki](/Falieson/tgrstack.com/wiki)
+- [Wiki](https://github.com/Falieson/tgrstack.com/wiki)
 - [Tutorials and Examples](http://www.tgrstack.com/)
 - [Changelog](/CHANGELOG.md)
