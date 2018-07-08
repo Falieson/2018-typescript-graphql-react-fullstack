@@ -1,7 +1,9 @@
 const Dotenv = require('dotenv-webpack');
+const fs = require('fs')
 const path = require('path')
 const WriteFilePlugin = require('write-file-webpack-plugin');
 
+const { isProd } = require('./config')
 const paths = require('./paths')
 
 // #  RULES
@@ -58,6 +60,32 @@ const files = {
   ]
 }
 
+const dotEnvOpts = (() => {
+  /** dotEnvIfExists
+   *
+   * Uses .env.development for default values
+   */
+  const dotEnvIfExists = (() => {
+    const envPath = path.join(paths._, '.env')
+    const defaultEnvPath = envPath+'.development'
+
+    const envExists = fs.existsSync(envPath)
+    return envExists
+      ? envPath
+      : defaultEnvPath
+  })()
+
+  return {
+    path: dotEnvIfExists, // path.join(paths._, '.env'), //  dotEnvIfExists,
+    // load '.env.development' to verify the '.env' variables are all set.
+    safe: path.join(paths._, '.env')+'.development',
+    // load all the predefined 'process.env' variables which will trump anything local per dotenv specs.
+    systemvars: true,
+    // hide any errors
+    // silent: true
+  }
+})()
+
 module.exports = {
   node: {
     __dirname: false,
@@ -77,11 +105,7 @@ module.exports = {
   },
   plugins: [
     new WriteFilePlugin({ log: true }),
-    new Dotenv({
-      path: path.join(paths._, '.env'),
-      safe: true,    // load '.env.example' to verify the '.env' variables are all set. Can also be a string to a different file.
-      systemvars: true, // load all the predefined 'process.env' variables which will trump anything local per dotenv specs.
-      // silent: true   // hide any errors
-    })
+    // NOTE: Dotenv must be loaded before webpack.DefinePlugin (in `webpack.common.client`)
+    new Dotenv(dotEnvOpts)
   ],
 };

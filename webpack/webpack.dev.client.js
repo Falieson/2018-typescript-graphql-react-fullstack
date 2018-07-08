@@ -8,7 +8,7 @@ const commonClient = require('./webpack.common.client');
 const clientTemplateSrc = paths.src.client.template
 
 const DevClientConfig = merge(commonClient, {
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({

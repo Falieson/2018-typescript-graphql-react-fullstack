@@ -3,7 +3,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 const colors = require('colors/safe') // tslint:disable-line no-var-requires
 
-import { paths } from '../../config'
+import paths from '../../../paths'
 
 const router = Express.Router()
 

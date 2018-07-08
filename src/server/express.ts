@@ -6,7 +6,6 @@ import { createServer } from 'http'
 import * as path from 'path'
 const colors = require('colors/safe') // tslint:disable-line no-var-requires
 
-import { isProd } from '../config'
 import {
   APP_PORT,
   MONGODB_URL_FULL,
@@ -25,11 +24,6 @@ export class Express {
 
   build() {
     const {app} = this
-
-    // webpack-dev-server
-    if (!isProd) {
-      app.set('trust proxy', 1)
-    }
 
     // Don't expose any software information to potential hackers.
     app.disable('x-powered-by')
@@ -63,12 +57,11 @@ export class Express {
     const listener = ws.listen(APP_PORT, () => {
 
       // tslint:disable-next-line no-console
-      console.log(colors.bgBlack.white(`
-      \n\n\n\n\n\n\n\n\n
+      console.log(colors.bgBlack.white(`\n\n\n\n\n\n\n\n\n
       🌐    ${onlineTitle}    🌐
 
-      📊    mongo       ${MONGODB_URL_FULL}
-      🔎    www         ${REACT_URL_WWW}`))
+      🔎    www         ${REACT_URL_WWW}
+      📊    mongo       ${MONGODB_URL_FULL}`))
       // 📡    endpoint    ${GRAPHQL_URL_GRAPHQL}
       // 🎮    explorer    ${GRAPHQL_URL_GRAPHIQL}
       // ➿    websocket   ${GRAPHQL_URL_WS}

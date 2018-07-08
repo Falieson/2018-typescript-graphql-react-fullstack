@@ -1,9 +1,10 @@
 // # Global configuration settings
+// extract all the env config that is used
+// put env based helpers here
+// env defaults are set in `.env.example`
+
 export const {
-  APP_NAME = 'TGR-demo',
-  APP_PORT = 3000,
-  HOST_NAME = '0.0.0.0', // NOTE: accessible on LAN, unlike 'localhost'
-  NODE_ENV = 'dev',
+  NODE_ENV,
 } = process.env
 
 // ## Helpers based on the above

@@ -1,0 +1,11 @@
+{
+  "events": {
+    "restart": "osascript -e 'display notification \"Restarted for:\n'$FILENAME'\" with title \"nodemon\"'"
+  },
+  "watch": [
+    "build",
+    ".env*",
+    "nodemon.json",
+    "package.json"
+  ]
+}

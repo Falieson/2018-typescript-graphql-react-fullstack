@@ -2,7 +2,7 @@
   "name": "2018-ts-module",
   "version": "1.0.0",
   "description": "TGRStack TS-React-Module w/ Declarations, WebPack, and Opinions.",
-  "main": "build/index.html",
+  "main": "build/server/main.js",
   "typings": "./build/index",
   "dependencies": {
     "apollo-cache-inmemory": "1.2.4",
@@ -46,6 +46,7 @@
     "babel-loader": "8.0.0-beta.3",
     "chokidar": "2.0.3",
     "chokidar-cli": "1.2.0",
+    "clean-webpack-plugin": "0.1.19",
     "commitizen": "2.10.1",
     "copy-webpack-plugin": "4.5.1",
     "css-loader": "0.28.11",

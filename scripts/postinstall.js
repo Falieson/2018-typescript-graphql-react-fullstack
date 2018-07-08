@@ -1,4 +1,10 @@
+const { concurrent, } = require('nps-utils') // rimraf, setColors, series
+
 module.exports = {
-  default:'nps postinstall.mongo',
+  default: concurrent.nps(
+    'postinstall.mongo',
+    'postinstall.build',
+  ),
   mongo: 'nps mongo.setup',
+  build: 'nps build.setup',
 }

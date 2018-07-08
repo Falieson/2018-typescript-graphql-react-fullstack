@@ -53,7 +53,8 @@ This module is part of a collection of uniformly built starter-kits designed for
 
 ### Express
 
-- [ ] :globe_with_meridians:  `express-server`
+- [x] :globe_with_meridians:  `express-server`
+- [x] :bread: in dev a browser to the website is opened
 - [ ] :new_moon_with_face:  `express-sessions`
 - [ ] :passport_control:  `passport` for Authorization
 
@@ -66,12 +67,13 @@ This module is part of a collection of uniformly built starter-kits designed for
 ### GraphQL
 
 - [x] :radio:  `apollo-client` w/ `link-state` instead of `react-redux`
-- [ ] :satellite:  `apollo-server` w/ `subscriptions` over websocket
+- [ ] :satellite:  `apollo-server 2` w/ `subscriptions` over websocket
 
 ### React
 
 - [x] :dragon:  React 16+
-- [ ] :space_invader: HMR reloads the Changed Code w/o refreshing the entire page
+- [ ] :space_invader: HMR reloads the changed code w/o refreshing the entire page
+- [ ] :space_invader: BrowserSync
 
 ### Tests
 
