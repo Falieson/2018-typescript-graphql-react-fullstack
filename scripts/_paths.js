@@ -125,7 +125,7 @@ const wpPaths = (() => {
     },
     server: {
       dev: mkWp('webpack.dev.server.js'),
-      // prod: mkWp('webpack.prod.server.js'),
+      prod: mkWp('webpack.prod.server.js'),
     }
   }
 })()

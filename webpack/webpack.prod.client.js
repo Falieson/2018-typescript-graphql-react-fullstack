@@ -2,24 +2,19 @@ const merge = require('webpack-merge');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const paths = require('../paths')
+const { htmlPluginOptions } = require('./config')
 const commonClient = require('./webpack.common.client');
-
-const clientTemplateSrc = paths.src.client.template
 
 const ProdClientConfig = merge(commonClient, {
   bail: true,
-  devtool: 'source-map',
+  devtool: false, // README.md
   mode: 'production',
   plugins: [
     new UglifyJSPlugin({
-      sourceMap: true,
+      sourceMap: false,
     }),
     new HtmlWebpackPlugin({
-      template: clientTemplateSrc,
-      filename: 'index.html',
-      appMountId: 'app',
-      inject: true,
+      ...htmlPluginOptions,
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -46,4 +41,5 @@ const ProdClientConfig = merge(commonClient, {
     }
   },
 })
+
 module.exports = ProdClientConfig

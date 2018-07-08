@@ -31,6 +31,10 @@ module.exports = {
     default: 'nps test.watch',
     description: 'Watch for changes covered by tests.',
   },
+  p: {
+    default: 'nps start.production',
+    description: 'Start the production version of the server.',
+  },
   // FIXME: w/ a prompt. We don't want to run this accidentally!
   //   https://stackoverflow.com/q/50770212/604950
   // r: {

@@ -21,5 +21,6 @@ module.exports = {
     },
   }),
   server: 'nps server',
+  production: 'nps server.production',
   mongo: 'nps mongo.server',
 }

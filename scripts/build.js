@@ -8,41 +8,46 @@ const _paths = require('./_paths.js')
 const concurrentBuild = type => { // dev or prod or watch
   const client = (() => {
     const obj = {}
-    obj[type === 'watch' ? 'app' : type] = {
+    const name = type === 'watch' ? 'app' : 'client'
+    obj[name] = {
       script: 'nps build.'+type+'.client',
       color: type === 'watch' ? 'yellow.bold' : 'green.bold',
     }
     return obj
   })()
 
-  const server = (() => {
-    const obj = {}
-    obj[type === 'watch' ? 'server' : type] =  {
-      script: 'nps build.'+type+'.server',
-      color: 'blue.bold',
-    }
-    return obj
-  })()
+  const server = {
+    script: 'nps build.'+type+'.server',
+    color: 'blue.bold',
+  }
 
   const options = {
     default: concurrent({
       ...client,
-      ...server,
+      server,
     }),
   }
 
   return options
 }
 
-const assetsPath = type => {
-  const path = type === 'server'
-    ? _paths.src.app.assets
-    : _paths.src.server.assets
+const setupAssets = (()=> {
+  const assetsPath = type => {
+    const path = type === 'server'
+      ? _paths.src.app.assets
+      : _paths.src.server.assets
 
-  return mkNewDirectory(path)
-  ? 'mkdir -p '+path
-  : 'echo "'+type+'/assets directory exists"'
-}
+    return mkNewDirectory(path)
+      ? 'mkdir -p '+path
+      : 'echo "'+type+'/assets directory exists"'
+  }
+
+  return {
+    default: concurrent.nps('build.setup.assets.app', 'build.setup.assets.server'),
+    app: assetsPath('app'),
+    server: assetsPath('server'),
+  }
+})()
 
 const build = {
   description: 'Remove the previous build and run the compiler',
@@ -66,11 +71,7 @@ const build = {
   },
   setup: {
     default: 'nps build.setup.assets',
-    assets: {
-      default: concurrent.nps('build.setup.assets.app', 'build.setup.assets.server'),
-      app: assetsPath('app'),
-      server: assetsPath('server'),
-    },
+    assets: setupAssets,
   },
 }
 

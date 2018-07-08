@@ -3,17 +3,17 @@
 </p>
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-2.9.1-blue.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
-[![WebPack](https://img.shields.io/badge/WebPack-4.12.0-blue.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
+[![WebPack](https://img.shields.io/badge/WebPack-4.12.0-blue.svg?style=flat-square)]('#')
 [![Node](https://img.shields.io/badge/Node-8.11.2-blue.svg?style=flat-square)](https://nodejs.org/en/)
 [![TSLint](https://img.shields.io/badge/TS_Lint-5.10.0-blue.svg?style=flat-square)](https://github.com/palantir/tslint/)
 [![TS-Jest](https://img.shields.io/badge/TS_Jest-22.4.6-blue.svg?style=flat-square)](https://nodejs.org/en/)
 
-[![ExpressServer](https://img.shields.io/badge/Express_Server-4.16.3-red.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
-[![Mongoose](https://img.shields.io/badge/Mongoose-5.1.7-red.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
-[![ApolloServer](https://img.shields.io/badge/Apollo_Server-1.3.6-red.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
+[![ExpressServer](https://img.shields.io/badge/Express_Server-4.16.3-red.svg?style=flat-square)]('#')
+[![Mongoose](https://img.shields.io/badge/Mongoose-5.1.7-red.svg?style=flat-square)]('#')
+[![ApolloServer](https://img.shields.io/badge/Apollo_Server-1.3.6-red.svg?style=flat-square)]('#')
 
-[![React](https://img.shields.io/badge/React-16.4.1-8400ff.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
-[![ApolloClient](https://img.shields.io/badge/Apollo_Client-2.3.4-8400ff.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
+[![React](https://img.shields.io/badge/React-16.4.1-8400ff.svg?style=flat-square)]('#')
+[![ApolloClient](https://img.shields.io/badge/Apollo_Client-2.3.4-8400ff.svg?style=flat-square)]('#')
 
 [![NPS friendly](https://img.shields.io/badge/NPS-friendly-brightgreen.svg?style=flat-square)](https://github.com/kentcdodds/nps)
 [![Commitizen friendly](https://img.shields.io/badge/Commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
@@ -21,14 +21,14 @@
 
 ## About
 
-This starter kit is a launching point for TypescriptGraphqlReact application prototyping. Running the build script compiles `src/` into `build/` with `build/server/` being an express-server ready for `pm2`.
+This starter kit is a launching point for **[Typescript Graphql React Fullstack prototyping](/Falieson/tgrstack.com/wiki/ts-gql-react-fullstack-home-page)**. Running the build script compiles `src/` into `build/` with `build/server/` being an express-server ready for `pm2`.
 
 This module is part of a collection of uniformly built starter-kits designed for large-scale application development with TypeScript, GraphQL, and React. Find these, articles, and examples at [www.TGRStack.com](http://www.TGRStack.com). Skip to the bottom for links to a series of tutorials that walkthrough the creation of this module.
 
 ## Requirements
 
-- [Install Node and Setup Dev Envionment](/docs/INSTALL_Environment.md) - Most can skip this
-- [Install MongoDB](/docs/INSTALL_MongoDB.md) - Dev Endpoint is config'd to use a local MongoDB
+- [Install Node and Setup Dev Envionment](/Falieson/tgrstack.com/wiki/Install-Environment) - Most can skip this
+- [Install MongoDB](/Falieson/tgrstack.com/wiki/Install-MongoDB) - Dev Endpoint is config'd to use a local MongoDB
 - Review `./webpack/paths.js`,  `./scripts/*`, `./tslint.json`, `./docs/`
 
 ## Commands - READ THIS
@@ -72,6 +72,7 @@ This module is part of a collection of uniformly built starter-kits designed for
 ### React
 
 - [x] :dragon:  React 16+
+- [x] :space_invader: page reloads when a change is available
 - [ ] :space_invader: HMR reloads the changed code w/o refreshing the entire page
 - [ ] :space_invader: BrowserSync
 
@@ -86,11 +87,11 @@ This module is part of a collection of uniformly built starter-kits designed for
 ### Build (w/ Webpack)
 
 - [x] 📦  All source is bundled using Webpack v4
-- [ ] 🌟  webpack for [dev, prod, common] X [server, client]
+- [x] 🌟  webpack for [dev, prod, common] X [server, client]
 - [x] 🚦  `ts-loader` for compiling typescript
 - [ ] 🚦  `webpack-graphql-loader` for separating gql from ts files
 - [x] 💦  babel-loader for additional polyfills (browser support)
-- [ ] 😎  HappyPack for Multithreaded builds
+- [ ] 😎  HappyPack for Multi-Threaded builds
 - [ ] 🤖  Auto generated Vendor DLL for smooth development experiences
 - [ ] 🍃  Tree-shaking
 
@@ -138,5 +139,6 @@ Now go make some changes to `src/index.ts` to see the tooling in action.
 
 ## Docs
 
+- [Wiki](/Falieson/tgrstack.com/wiki)
 - [Tutorials and Examples](http://www.tgrstack.com/)
 - [Changelog](/CHANGELOG.md)
