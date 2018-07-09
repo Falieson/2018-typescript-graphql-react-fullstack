@@ -1,7 +1,6 @@
 /** `nps open`
  *
  * the particular way you open a browser changes based on your os
- * TODO: use node.os() to try and do some sensible defaulting
  *
  * windows: 'start'
  * osx:     'open'
@@ -9,8 +8,24 @@
  *
 **/
 
+const openBrowser = (()=> {
+  const os = require('os').platform()
+  const linuxWeb = 'google-chrome-stable' // 'gnome-open'
+
+  switch (os) {
+    case 'darwin':
+      return 'open'
+    case 'win32':
+      return 'open'
+    case 'linux':
+      return linuxWeb
+    default:
+      return 'open'
+  }
+})()
+
 module.exports = {
   default: 'nps open.web',
-  web: 'google-chrome-stable http://localhost:3000/',
-  gql: 'google-chrome-stable http://localhost:3000/graphiql',
+  web: openBrowser+' http://localhost:3000/',
+  gql: openBrowser+' http://localhost:3000/graphiql',
 }
