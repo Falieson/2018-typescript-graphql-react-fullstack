@@ -2,12 +2,12 @@ import * as React from 'react'
 import Apollo from './apollo'
 import Router from './router'
 
-const GQL_ENDPOINT = '' // "https://w5xlvm3vzz.lp.gql.zone/graphql"
+import { GRAPHQL_URL_REST } from '../config.apollo'
 
 function Middlwares({children}: {children: React.ReactChild}) {
   return (
     <Apollo
-      graphqlURL={GQL_ENDPOINT}
+      graphqlURL={GRAPHQL_URL_REST}
     >
       <Router>
         {children}

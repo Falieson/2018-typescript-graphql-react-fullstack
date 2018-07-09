@@ -1,5 +1,7 @@
-import * as Express from './express/'
+import * as Apollo from './apollo'
+import * as Express from './express'
 
 export {
+  Apollo,
   Express
 }

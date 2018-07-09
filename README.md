@@ -4,16 +4,16 @@
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-2.9.1-blue.svg?style=flat-square)](https://github.com/Microsoft/TypeScript)
 [![WebPack](https://img.shields.io/badge/WebPack-4.12.0-blue.svg?style=flat-square)]('#')
-[![Node](https://img.shields.io/badge/Node-8.11.2-blue.svg?style=flat-square)](https://nodejs.org/en/)
+[![Node](https://img.shields.io/badge/Node-10.6.0-blue.svg?style=flat-square)](https://nodejs.org/en/)
 [![TSLint](https://img.shields.io/badge/TS_Lint-5.10.0-blue.svg?style=flat-square)](https://github.com/palantir/tslint/)
 [![TS-Jest](https://img.shields.io/badge/TS_Jest-22.4.6-blue.svg?style=flat-square)](https://nodejs.org/en/)
 
-[![ExpressServer](https://img.shields.io/badge/Express_Server-4.16.3-red.svg?style=flat-square)]('#')
-[![Mongoose](https://img.shields.io/badge/Mongoose-5.1.7-red.svg?style=flat-square)]('#')
-[![ApolloServer](https://img.shields.io/badge/Apollo_Server-1.3.6-red.svg?style=flat-square)]('#')
+[![ExpressServer](https://img.shields.io/badge/Express_Server-4.16.3-red.svg?style=flat-square)](https://github.com/expressjs/express)
+[![Mongoose](https://img.shields.io/badge/Mongoose-5.1.7-red.svg?style=flat-square)](https://github.com/Automattic/mongoose)
+[![ApolloServer](https://img.shields.io/badge/Apollo_Server-2.0.0.rc6-red.svg?style=flat-square)](https://github.com/apollographql/apollo-server)
 
 [![React](https://img.shields.io/badge/React-16.4.1-8400ff.svg?style=flat-square)]('#')
-[![ApolloClient](https://img.shields.io/badge/Apollo_Client-2.3.4-8400ff.svg?style=flat-square)]('#')
+[![ApolloClient](https://img.shields.io/badge/Apollo_Client-2.3.4-8400ff.svg?style=flat-square)](https://github.com/apollographql/apollo-client)
 
 [![NPS friendly](https://img.shields.io/badge/NPS-friendly-brightgreen.svg?style=flat-square)](https://github.com/kentcdodds/nps)
 [![Commitizen friendly](https://img.shields.io/badge/Commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
@@ -42,6 +42,12 @@ This module is part of a collection of uniformly built starter-kits designed for
 * nps test              # Test checks the module
 ```
 
+## Built In
+
+- [x] Page layed out with Header/Body
+- [x] Router split between LoggedIn and LoggedOut
+- [ ] AuthWall w/ PassportJS. Create Users and Login w/ Passport Password, stored in Mongo
+
 ## Features
 
 ### Core
@@ -67,7 +73,10 @@ This module is part of a collection of uniformly built starter-kits designed for
 ### GraphQL
 
 - [x] :radio:  `apollo-client` w/ `link-state` instead of `react-redux`
-- [ ] :satellite:  `apollo-server 2` w/ `subscriptions` over websocket
+- [ ] :satellite: `apollo-server`
+- [ ] :yum:  `graphiql` (not `playground` because issues w/ sessions/passport)
+- [ ] :satellite: `apollo-server` w/ `subscriptions` (websocket)
+- [ ] ~~:satellite: `apollo-server 2`~~ <=== `./docs/THINGS_THAT_NEED_FIXING.md`
 
 ### React
 

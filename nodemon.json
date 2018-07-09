@@ -3,8 +3,10 @@
     "restart": "osascript -e 'display notification \"Restarted for:\n'$FILENAME'\" with title \"nodemon\"'"
   },
   "watch": [
-    "build",
+    "build/server/",
+    "build/client/",
     ".env*",
+    ".env.development*",
     "nodemon.json",
     "package.json"
   ]

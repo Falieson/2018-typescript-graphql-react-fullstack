@@ -105,7 +105,6 @@ module.exports = {
   },
   plugins: [
     new WriteFilePlugin({ log: true }),
-    // NOTE: Dotenv must be loaded before webpack.DefinePlugin (in `webpack.common.client`)
     new Dotenv(dotEnvOpts)
   ],
 };

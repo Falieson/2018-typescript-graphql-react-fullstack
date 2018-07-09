@@ -11,7 +11,16 @@ import {
   MONGODB_URL_FULL,
   REACT_URL_WWW,
 } from './config'
-import { Express as ExpressMW } from './middleware/'
+import {
+  GRAPHQL_URL_GRAPHIQL,
+  GRAPHQL_URL_REST,
+  GRAPHQL_URL_WS,
+} from './config.apollo'
+
+import {
+  Apollo as ApolloMW,
+  Express as ExpressMW,
+} from './middleware/'
 
 // NOTE: the default export runs the constructor!
 export class Express {
@@ -27,6 +36,14 @@ export class Express {
 
     // Don't expose any software information to potential hackers.
     app.disable('x-powered-by')
+
+    // Session
+
+    // Apollo
+    app.use(...ApolloMW.graphql)
+    app.use(...ApolloMW.graphiql)
+
+    // Passport
 
     // Morgan Logger
     app.use(...ExpressMW.morgan)
@@ -55,16 +72,18 @@ export class Express {
     // Create a http/ws listener for our express app.
     const ws = createServer(app)
     const listener = ws.listen(APP_PORT, () => {
+      ApolloMW.graphqlWs(ws)
 
       // tslint:disable-next-line no-console
       console.log(colors.bgBlack.white(`\n\n\n\n\n\n\n\n\n
       🌐    ${onlineTitle}    🌐
 
       🔎    www         ${REACT_URL_WWW}
-      📊    mongo       ${MONGODB_URL_FULL}`))
-      // 📡    endpoint    ${GRAPHQL_URL_GRAPHQL}
-      // 🎮    explorer    ${GRAPHQL_URL_GRAPHIQL}
-      // ➿    websocket   ${GRAPHQL_URL_WS}
+      📊    mongo       ${MONGODB_URL_FULL}
+      📡    endpoint    ${GRAPHQL_URL_REST}
+      🎮    explorer    ${GRAPHQL_URL_GRAPHIQL}
+      ➿    websocket   ${GRAPHQL_URL_WS}
+      `))
     })
 
     return listener
