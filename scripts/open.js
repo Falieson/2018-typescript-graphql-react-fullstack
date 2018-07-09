@@ -26,6 +26,7 @@ const openBrowser = (()=> {
 
 module.exports = {
   default: 'nps open.web',
+  mongo: 'nps mongo.client',
   web: openBrowser+' http://localhost:3000/',
   gql: openBrowser+' http://localhost:3000/graphiql',
 }

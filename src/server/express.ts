@@ -38,6 +38,20 @@ export class Express {
     app.disable('x-powered-by')
 
     // Session
+    app.use(...ExpressMW.session)
+    // Access the session as req.session
+    app.get('/__test_session', (req: Express.Request, res: Express.Response) => {
+      if (req.session.views) {
+        req.session.views++
+        res.setHeader('Content-Type', 'text/html')
+        res.write(`<p>views: ${req.session.views}</p>`)
+        res.write(`<p>expires in: ${req.session.cookie.maxAge / 1000}</p>`)
+        res.end()
+      } else {
+        req.session.views = 1
+        res.end('welcome to the session demo. refresh!')
+      }
+    })
 
     // Apollo
     app.use(...ApolloMW.graphql)

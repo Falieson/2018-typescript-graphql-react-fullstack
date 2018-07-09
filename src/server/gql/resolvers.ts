@@ -1,3 +1,5 @@
+import { User } from '../data/'
+
 // tslint:disable no-console
 import { ifClientCache } from './_helpers'
 
@@ -12,8 +14,12 @@ export const defaultValues = {
   },
 }
 
-export default {
+const resolvers = {
   Mutation: {
+    userCreate(_: any, args: any, ctx: any) {
+      return User.register(ctx, args)
+    },
+
     authLogin: (_, { username, password }, { cache }) => {
       const isAuthed = username.length > 0  && password.length > 0
       const authorization = {
@@ -35,6 +41,8 @@ export default {
     },
   },
 }
+
+export default resolvers
 
 // https://www.apollographql.com/docs/react/advanced/caching.html#reset-store
 // resetOnLogout: async () => client.resetStore(),

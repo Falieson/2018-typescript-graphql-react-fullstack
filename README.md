@@ -10,7 +10,7 @@
 
 [![ExpressServer](https://img.shields.io/badge/Express_Server-4.16.3-red.svg?style=flat-square)](https://github.com/expressjs/express)
 [![Mongoose](https://img.shields.io/badge/Mongoose-5.1.7-red.svg?style=flat-square)](https://github.com/Automattic/mongoose)
-[![ApolloServer](https://img.shields.io/badge/Apollo_Server-2.0.0.rc6-red.svg?style=flat-square)](https://github.com/apollographql/apollo-server)
+[![ApolloServer](https://img.shields.io/badge/Apollo_Server-1.3.6-red.svg?style=flat-square)](https://github.com/apollographql/apollo-server)
 
 [![React](https://img.shields.io/badge/React-16.4.1-8400ff.svg?style=flat-square)]('#')
 [![ApolloClient](https://img.shields.io/badge/Apollo_Client-2.3.4-8400ff.svg?style=flat-square)](https://github.com/apollographql/apollo-client)
@@ -61,13 +61,13 @@ This module is part of a collection of uniformly built starter-kits designed for
 
 - [x] :globe_with_meridians:  `express-server`
 - [x] :bread: in dev a browser to the website is opened
-- [ ] :new_moon_with_face:  `express-sessions`
+- [x] :new_moon_with_face:  `express-sessions`
 - [ ] :passport_control:  `passport` for Authorization
 
 ### MongoDB
 
 - [x] :bank:  `mongodb` dev helpers (`./scripts/mongo.js`)
-- [ ] :bullettrain_front:  `mongoose` ORM for better MongoDB development
+- [x] :bullettrain_front:  `mongoose` ORM for better MongoDB development
 - [ ] :passport_control:  `passport-local-mongoose` for Auth w/ Password
 
 ### GraphQL
@@ -81,7 +81,7 @@ This module is part of a collection of uniformly built starter-kits designed for
 ### React
 
 - [x] :dragon:  React 16+
-- [x] :space_invader: page reloads when a change is available
+- [x] :space_invader: page reloads when a change is available, exits when the server is closed
 - [ ] :space_invader: HMR reloads the changed code w/o refreshing the entire page
 - [ ] :space_invader: BrowserSync
 

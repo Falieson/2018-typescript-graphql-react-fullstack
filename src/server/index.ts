@@ -1,8 +1,8 @@
 // # Server Entry Points
 import Express from './express'
-// import mongodb from './mongodb
+import mongodb from './mongodb'
 
 (async () => {
-  // await mongodb.init()
+  await mongodb.init()
   Express.init()
 })()

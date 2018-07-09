@@ -9,6 +9,7 @@ class LoggedOutHeader extends React.Component<{}, {}> {
     const items = [
       <span className="header--text">LoggedOut Header</span>, // tslint:disable-line jsx-key
       <Link to="/">Home</Link>,                               // tslint:disable-line jsx-key
+      <a target="_new" href="/__test_session">Test Session</a>,             // tslint:disable-line jsx-key
       <Link to="/about">About</Link>,                         // tslint:disable-line jsx-key
       <Link to="/foo">Foo</Link>,                             // tslint:disable-line jsx-key
     ]

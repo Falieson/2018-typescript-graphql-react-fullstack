@@ -107,4 +107,4 @@ module.exports = {
     new WriteFilePlugin({ log: true }),
     new Dotenv(dotEnvOpts)
   ],
-};
+}
