@@ -139,6 +139,7 @@ const wpPaths = (() => {
 })()
 
 module.exports = {
+  rootPath,
   build,
   src,
   wp: wpPaths,

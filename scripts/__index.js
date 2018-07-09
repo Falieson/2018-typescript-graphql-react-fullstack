@@ -4,11 +4,11 @@ const build = require('./build.js')
 const commit = require('./commit.js')
 const lint = require('./lint.js')
 const mongo = require('./mongo.js')
+const npm = require('./npm.js')
 const open = require('./open.js')
 const postinstall = require('./postinstall.js')
 const release = require('./release.js')
 const shortcuts = require('./shortcuts')
-const scrub = require('./scrub.js')
 const server = require('./server.js')
 const start = require('./start.js')
 const test = require('./test.js')
@@ -33,11 +33,11 @@ const scripts =  {
   git,
   lint,
   mongo,
+  npm,
   open,
   publish,
   postinstall,
   release,
-  scrub,
   server,
   start,
   test,

@@ -1,7 +1,7 @@
 const { concurrent, series, } = require('nps-utils') // rimraf, setColors
 
 module.exports = {
-  default: series.nps('scrub.build', 'start.dev'),
+  default: series.nps('build.scrub', 'start.dev'),
   dev: concurrent({
     build: {
       script: 'nps build.watch',

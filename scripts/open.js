@@ -16,7 +16,7 @@ const openBrowser = (()=> {
     case 'darwin':
       return 'open'
     case 'win32':
-      return 'open'
+      return 'start'
     case 'linux':
       return linuxWeb
     default:

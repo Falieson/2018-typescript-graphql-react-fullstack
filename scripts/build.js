@@ -1,4 +1,4 @@
-const { series, concurrent} = require('nps-utils') // rimraf, setColors
+const { series, concurrent, rimraf,} = require('nps-utils') //  setColors
 const {
   mkNewDirectory,
   watch,
@@ -52,6 +52,7 @@ const setupAssets = (()=> {
 const build = {
   description: 'Remove the previous build and run the compiler',
   default: 'nps build.development',
+  scrub: rimraf('build/'),
   development: {
     default: series.nps('commit.pre','build.development.multi'),
     client: 'npx webpack --config '+_paths.wp.client.dev,
