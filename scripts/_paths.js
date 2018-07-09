@@ -55,6 +55,7 @@ const src = (() => {
 
 const watchPaths = (() => {
   const P = 'src/'
+  const A = P+APP+'/'
   const C = P+CLIENT+'/'
   const S = P+SERVER+'/'
   const W = 'webpack/'
@@ -82,17 +83,18 @@ const watchPaths = (() => {
   return Object.assign({}, {
     // chokidar doesn't run unless that level of the heirarchy is called...
     client: [
-      C+'*.ts',
-      C+'*.tsx',
-      C+X+'*.ts',
-      C+X+'*.tsx',
-      C+X+X+'*.ts',
-      C+X+X+'*.tsx',
-      C+X+X+X+'*.ts',
-      C+X+X+X+'*.tsx',
-      C+'assets/*',
-      C+'assets/'+X+'*',
-      C+'assets/'+X+X+'*',
+      C+'*',
+      A+'*.ts',
+      A+'*.tsx',
+      A+X+'*.ts',
+      A+X+'*.tsx',
+      A+X+X+'*.ts',
+      A+X+X+'*.tsx',
+      A+X+X+X+'*.ts',
+      A+X+X+X+'*.tsx',
+      A+'assets/*',
+      A+'assets/'+X+'*',
+      A+'assets/'+X+X+'*',
       W+'*.client.js',
       W+X+'*.client.js',
       W+X+X+'*.client.js',

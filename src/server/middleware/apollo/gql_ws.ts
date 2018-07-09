@@ -3,8 +3,8 @@ import { PubSub } from 'graphql-subscriptions'
 import { Server } from 'http'
 import { SubscriptionServer } from 'subscriptions-transport-ws'
 
-import { schema } from '../../../gql'
 import { GRAPHQL_WS } from '../../config.apollo'
+import { schema } from '../../gql'
 
 export const pubsub = new PubSub()
 

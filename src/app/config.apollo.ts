@@ -1,4 +1,10 @@
 import { webaddress } from '../helpers/string'
+import resolvers, {defaultValues as resolverDefaults } from '../server/gql/resolvers'
+
+export {
+  resolvers,
+  resolverDefaults
+}
 
 export const HOST_NAME = 'localhost'
 export const APP_PORT = 3000

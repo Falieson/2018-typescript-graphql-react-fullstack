@@ -4,7 +4,7 @@ const merge = require('webpack-merge')
 const commonServer = require('./webpack.common.server');
 
 const DevServerConfig = merge(commonServer, {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   mode: 'development',
   node: {
     net: true,

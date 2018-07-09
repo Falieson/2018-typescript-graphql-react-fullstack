@@ -8,7 +8,7 @@ module.exports = {
       color: 'white.bold',
     },
     server: {
-      script: 'sleep 10 && nps server',
+      script: 'sleep 5 && nps server',
       color: 'magenta.bold',
     },
     mongo: {

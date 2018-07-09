@@ -5,7 +5,7 @@ const { HOST_PATH, htmlPluginOptions } = require('./config')
 const commonClient = require('./webpack.common.client');
 
 const DevClientConfig = merge(commonClient, {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({

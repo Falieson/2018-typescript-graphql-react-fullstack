@@ -2,8 +2,8 @@
 import { graphqlExpress } from 'apollo-server-express'
 import * as bodyParser from 'body-parser'
 
-import { schema } from '../../../gql'
 import { GRAPHQL_REST } from '../../config.apollo'
+import { schema } from '../../gql'
 
 const graphqlHandler = graphqlExpress((req: any): any => { // tslint:disable-line no-any
 

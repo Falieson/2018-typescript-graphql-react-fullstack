@@ -73,8 +73,8 @@ This module is part of a collection of uniformly built starter-kits designed for
 ### GraphQL
 
 - [x] :radio:  `apollo-client` w/ `link-state` instead of `react-redux`
-- [ ] :satellite: `apollo-server`
-- [ ] :yum:  `graphiql` (not `playground` because issues w/ sessions/passport)
+- [x] :satellite: `apollo-server`
+- [x] :yum:  `graphiql` (not `playground` because issues w/ sessions/passport)
 - [ ] :satellite: `apollo-server` w/ `subscriptions` (websocket)
 - [ ] ~~:satellite: `apollo-server 2`~~ <=== `./docs/THINGS_THAT_NEED_FIXING.md`
 

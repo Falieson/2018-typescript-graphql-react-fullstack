@@ -7,7 +7,7 @@ import { withClientState } from 'apollo-link-state'
 import * as React from 'react'
 import { ApolloProvider } from 'react-apollo'
 
-import { ResolverDefaults,  resolvers, } from '../../gql/'
+import { resolverDefaults,  resolvers, } from '../config.apollo'
 
 interface IProps {
   graphqlURL: string,
@@ -21,7 +21,7 @@ export default class ApolloClientProvider extends React.Component<IProps> {
 
   private _stateLink = withClientState({
     cache: this._cache,
-    defaults: ResolverDefaults,
+    defaults: resolverDefaults,
     resolvers,
   })
 
