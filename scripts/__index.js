@@ -4,6 +4,7 @@ const build = require('./build.js')
 const commit = require('./commit.js')
 const lint = require('./lint.js')
 const mongo = require('./mongo.js')
+const open = require('./open.js')
 const postinstall = require('./postinstall.js')
 const release = require('./release.js')
 const shortcuts = require('./shortcuts')
@@ -32,6 +33,7 @@ const scripts =  {
   git,
   lint,
   mongo,
+  open,
   publish,
   postinstall,
   release,

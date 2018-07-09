@@ -11,7 +11,7 @@ const concurrentBuild = type => { // dev or prod or watch
     const name = type === 'watch' ? 'app' : 'client'
     obj[name] = {
       script: 'nps build.'+type+'.client',
-      color: type === 'watch' ? 'yellow.bold' : 'green.bold',
+      color: 'green.bold',
     }
     return obj
   })()

@@ -5,15 +5,15 @@ module.exports = {
   dev: concurrent({
     build: {
       script: 'nps build.watch',
-      color: 'green.bold',
+      color: 'white.bold',
     },
     server: {
-      script: 'nps server',
+      script: 'sleep 10 && nps server',
       color: 'magenta.bold',
     },
     mongo: {
       script: 'nps mongo.server',
-      color: 'blue.bold',
+      color: 'red.bold',
     },
     lint: {
       script: 'nps lint.watch',

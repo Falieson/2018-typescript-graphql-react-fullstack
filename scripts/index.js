@@ -1,2 +1,1 @@
-const index = require('./__index')
-module.exports = index
+module.exports = require('./__index')
