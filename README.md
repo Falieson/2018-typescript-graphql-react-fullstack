@@ -120,6 +120,7 @@ To use the starter-kit to build your own ts-module run these commands:
 git clone https://github.com/Falieson/2018-typescript-graphql-react-fullstack my-project
 cd my-project
 rm -rf .git && git init
+git add .
 git commit -m "INIT'd w/ @Falieson/2018-typescript-graphql-react-fullstack@SHA4985"
 npm install
 nps test
